@@ -14,7 +14,7 @@ app.use("*", cors());
 
 const manager = new DocumentManager(process.env.CONNECTION_STRING as string);
 
-app.post("/api/auth", async (c) => {
+app.post("/yjs/auth", async (c) => {
   const { docId } = await c.req.json<{ docId?: string }>();
   const clientToken = await manager.getOrCreateDocAndToken(docId);
   return c.json(clientToken);
