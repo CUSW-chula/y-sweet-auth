@@ -31,8 +31,8 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build . -t your-dockerhub-username/y-sweet-auth:latest \
+          docker build . -t bunnybunbun37204/y-sweet-auth:latest \
             --build-arg CONNECTION_STRING=${{ secrets.CONNECTION_STRING }}
 
       - name: Push Docker image to Docker Hub
-        run: docker push your-dockerhub-username/y-sweet-auth:latest
+        run: docker push bunnybunbun37204/y-sweet-auth:latest
